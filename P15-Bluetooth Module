@@ -1,0 +1,5 @@
+>>> %Run Bluetooth.py
+Server started B8:27:EB:1D:E5:DE
+Waiting for connection
+Client connected 34:B9:8D:63:A0:8A
+Client disconnected

@@ -1,0 +1,70 @@
+
+#include "includes.h"
+
+OS_STK Task1Stk[1024];
+OS_STK Task2Stk[1024];
+
+OS_EVENT *Mutex;
+
+/* Shared Resource */
+int shared_counter = 0;
+
+int  main (void)
+{
+    INT8U err;
+    BSP_Init();					/* Initialize BSP functions                                */
+    InitUart0();
+    OSInit();					/* Initialize "uC/OS-II, The Real-Time Kernel"              */
+	
+	/* Create Mutex with Priority Inheritance */
+    Mutex = OSMutexCreate(4, &err);   // Priority 4 for mutex
+	
+	OSTaskCreate(App_Task1,(void *)0,&Task1Stk[1023],6);
+    OSTaskCreate(App_Task2,(void *)0,&Task2Stk[1023],7);
+
+    OSStart();                             /* Start multitasking (i.e. give control to uC/OS-II)       */
+    while(1);
+
+}
+
+
+void  App_Task1 (void *p_arg)
+{
+    INT8U err;
+    while(1)
+    {
+        OSMutexPend(Mutex, 0, &err);
+
+        printf("\nTask1: Mutex Acquired");
+        printf("\nTask1: Using Shared Resource...");
+        shared_counter++;
+        printf("\n Shared counter incremented by task 1: %d",shared_counter);
+        OSTimeDlyHMSM(0,0,0,500);  // 500 ms inside critical section
+        printf("\nTask1: Releasing Mutex");
+
+        OSMutexPost(Mutex);
+
+        OSTimeDlyHMSM(0,0,1,0);   // Delay outside critical section
+    }
+}
+
+
+void  App_Task2 (void *p_arg)
+{
+    INT8U err;
+    while(1)
+    {
+        OSMutexPend(Mutex, 0, &err);
+
+        printf("\nTask2: Mutex Acquired");
+        printf("\nTask2: Using Shared Resource...");
+        shared_counter++;
+        printf("\n Shared counter incremented by task 2: %d",shared_counter);
+        OSTimeDlyHMSM(0,0,0,500);
+        printf("\nTask2: Releasing Mutex");
+
+        OSMutexPost(Mutex);
+
+        OSTimeDlyHMSM(0,0,1,0);
+    }
+}

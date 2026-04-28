@@ -1,21 +1,37 @@
->>> %Run led_Relay_Buzzer.py
-LED ON
-RELAY ON
-BUZZER ON
-LED off
-RELAY OFF
-BUZZER OFF
-1
-LED ON
-RELAY ON
-BUZZER ON
-LED off
-RELAY OFF
-BUZZER OFF
-2
-LED ON
-RELAY ON
-BUZZER ON
-LED off
-RELAY OFF
-BUZZER OFF
+int g=2;
+int y=3;
+int r=4;
+
+void setup() {
+Serial.begin(9600);
+
+pinMode(r,OUTPUT);
+digitalWrite(r,LOW);
+
+pinMode(g,OUTPUT);
+digitalWrite(g,LOW);
+
+pinMode(y,OUTPUT);
+digitalWrite(y,LOW);
+}
+
+void loop() {
+
+digitalWrite(g,HIGH);
+Serial.println("Green LED: GO");
+delay(5000);
+
+digitalWrite(g,LOW);
+digitalWrite(y,HIGH);
+Serial.println("Yellow LED: Wait");
+delay(5000);
+
+digitalWrite(y,LOW);
+digitalWrite(r,HIGH);
+Serial.println("RED LED: STOP");
+delay(5000);
+
+digitalWrite(r,LOW);
+Serial.println("ALL OFF");
+delay(10000);
+}

@@ -1,37 +1,8 @@
-emp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=36.0%
-Temp=31.0*C Humidity=37.0%
-Temp=31.0*C Humidity=37.0%
-Temp=31.0*C Humidity=41.0%
-Temp=31.0*C Humidity=41.0%
-Temp=31.0*C Humidity=42.0%
-Temp=31.0*C Humidity=42.0%
-Temp=31.0*C Humidity=42.0%
-Temp=31.0*C Humidity=42.0%
-Temp=31.0*C Humidity=43.0%
-Temp=31.0*C Humidity=43.0%
-Temp=32.0*C Humidity=44.0%
-Temp=32.0*C Humidity=44.0%
-Temp=32.0*C Humidity=44.0%
-Temp=32.0*C Humidity=45.0%
-Temp=32.0*C Humidity=45.0%
-Temp=32.0*C Humidity=45.0%
-Temp=32.0*C Humidity=46.0%
-Temp=32.0*C Humidity=46.0%
-Temp=32.0*C Humidity=47.0%
-Temp=32.0*C Humidity=46.0%
-Temp=32.0*C Humidity=46.0%
-Temp=32.0*C Humidity=45.0%
-Temp=32.0*C Humidity=45.0%
-Temp=32.0*C Humidity=44.0%
-Temp=32.0*C Humidity=44.0%
+import Adafruit_DHT
 
+sensor = Adafruit_DHT.DHT11
+pin = 23
+
+while True:
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    print('Temp={0:0.1f}*C Humidity={1:0.1f}%'.format(temperature, humidity))

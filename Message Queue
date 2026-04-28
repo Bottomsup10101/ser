@@ -1,0 +1,66 @@
+
+#include "includes.h"
+OS_STK Task1Stk[1024];
+OS_STK Task2Stk[1024];
+
+OS_EVENT  *CommQ;
+void *CommMsg[10];
+
+int  main (void)
+{
+    BSP_Init();					 
+    
+    OSInit();
+	
+	CommQ = OSQCreate(&CommMsg[0],10);		 
+	
+	OSTaskCreate(App_Task1,(void *)0,&Task1Stk[1023],6);
+    OSTaskCreate(App_Task2,(void *)0,&Task2Stk[1023],7);
+
+    OSStart();                               
+    while(1);
+
+}
+
+INT8U i;
+INT8U err;
+INT8U CommRxBuf[10] = {1,2,3,4,5,6,7,8,9,0};
+
+void  App_Task1 (void *p_arg)
+{
+    while(1)
+    {
+    	for(i=0;i<12;i++)
+    	{
+    	err = OSQPost(CommQ, (void *)&CommRxBuf[i]);
+    	
+  switch (err) {
+  case OS_NO_ERR: printf("Message was deposited into queue \n");
+            	break;
+            	
+            case OS_Q_FULL: printf("Queue is full \n");
+            	break;
+        }
+        }
+     OSTimeDlyHMSM(0,0,20,0);
+     }
+}
+
+void  App_Task2 (void *p_arg)
+{
+   
+    INT8U  *msg;
+    while(1)
+    {
+    msg = OSQPend(CommQ, 100, &err);
+        if (err == OS_NO_ERR) 
+        {
+            printf("Message received \n");
+            printf("Received Message =%d \n", *msg);
+        }
+        else
+            printf("Message not received \n");
+        
+        OSTimeDlyHMSM(0,0,1,0);
+     }
+}

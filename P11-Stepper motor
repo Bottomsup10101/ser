@@ -1,0 +1,704 @@
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+motor running anticlockwise
+
+>>> %Run stepper_motor_control.py
+select motor direction a=anticlockwise, c=clockwise: c
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+motor running clockwise
+
+select motor direction a=anticlockwise, c=clockwise or q=exit: q
+motor stopped
+
+ 

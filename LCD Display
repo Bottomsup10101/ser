@@ -1,0 +1,82 @@
+#include <Philips\LPC2148.h>
+    
+
+
+ 
+#define RS (1<<5)     // P0.5 
+#define EN (1<<7)     // P0.7 
+ 
+void delay_ms(unsigned int ms) 
+{ 
+    unsigned int i, j; 
+    for(i = 0; i < ms; i++) 
+        for(j = 0; j < 1000; j++); 
+} 
+ 
+/* Enable pulse */ 
+void lcd_enable(void) 
+{ 
+    IO0SET = EN; 
+    delay_ms(2); 
+    IO0CLR = EN; 
+} 
+ 
+/* Send command to LCD */ 
+void lcd_cmd(unsigned char cmd) 
+{ 
+    IO0CLR = RS;                 // RS = 0 (command) 
+    IO0CLR = 0x0000FF00;         // Clear data lines 
+    IO0SET = ((unsigned int)cmd << 8); 
+    lcd_enable(); 
+    delay_ms(5); 
+} 
+ 
+/* Send data to LCD */ 
+void lcd_data(unsigned char data) 
+{ 
+    IO0SET = RS;                 // RS = 1 (data) 
+    IO0CLR = 0x0000FF00; 
+    IO0SET = ((unsigned int)data << 8); 
+    lcd_enable(); 
+    delay_ms(2); 
+} 
+ 
+/* LCD initialization (CRITICAL PART) */ 
+void lcd_init(void) 
+{ 
+    delay_ms(20);        // LCD power-on delay 
+ 
+    lcd_cmd(0x38);       // 8-bit, 2 line, 5x7 
+    lcd_cmd(0x0C);       // Display ON, cursor OFF 
+    lcd_cmd(0x06);       // Entry mode 
+    lcd_cmd(0x01);       // Clear display 
+    delay_ms(5); 
+} 
+ 
+/* Display string */ 
+void lcd_string(char *p) 
+{ 
+    while(*p) 
+    { 
+        lcd_data(*p++); 
+    } 
+} 
+ 
+int main(void) 
+{ 
+    /* Set P0.5, P0.7, P0.8–P0.15 as output */ 
+    IO0DIR = 0x0000FFA0; 
+ 
+    lcd_init(); 
+ 
+    lcd_cmd(0x80);               // Line 1 
+    lcd_string(" Prajakta B-14 "); 
+ 
+    lcd_cmd(0xC0);               // Line 2 
+    lcd_string(" 2026 "); 
+ 
+    while(1); 
+ 
+    return 0; 
+} 
+ 

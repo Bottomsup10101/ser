@@ -1,0 +1,53 @@
+#include <Philips\LPC2148.h>
+
+ 
+/* Delay Function */ 
+void delay(unsigned int time) 
+{ 
+    unsigned int i, j; 
+    for(i = 0; i < time; i++) 
+        for(j = 0; j < 1000; j++); 
+} 
+ 
+/* Main Program */ 
+int main(void) 
+{ 
+    /* Configure P0.8 to P0.15 as Output */ 
+    IO0DIR = 0x0000FF00; 
+ 
+    while(1) 
+    { 
+        IO0SET = 0x00000100;   // LED1 ON (P0.8) 
+        delay(100); 
+        IO0CLR = 0x00000100; 
+ 
+        IO0SET = 0x00000200;   // LED2 ON (P0.9) 
+        delay(100); 
+        IO0CLR = 0x00000200; 
+ 
+        IO0SET = 0x00000400;   // LED3 ON (P0.10) 
+        delay(100); 
+        IO0CLR = 0x00000400; 
+ 
+        IO0SET = 0x00000800;   // LED4 ON (P0.11) 
+        delay(100); 
+        IO0CLR = 0x00000800; 
+ 
+        IO0SET = 0x00001000;   // LED5 ON (P0.12) 
+        delay(100); 
+        IO0CLR = 0x00001000; 
+ 
+        IO0SET = 0x00002000;   // LED6 ON (P0.13) 
+        delay(100); 
+        IO0CLR = 0x00002000; 
+ 
+        IO0SET = 0x00004000;   // LED7 ON (P0.14) 
+        delay(100); 
+        IO0CLR = 0x00004000; 
+ 
+        IO0SET = 0x00008000;   // LED8 ON (P0.15) 
+        delay(100); 
+IO0CLR = 0x00008000; 
+} 
+return 0;   // removes warning 
+} 

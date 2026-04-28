@@ -1,0 +1,49 @@
+
+#include "includes.h"
+
+OS_STK Task1Stk[1024];
+OS_STK Task2Stk[1024];
+
+OS_EVENT *DispSem;
+int  main (void)
+{
+    BSP_Init();					
+    OSInit();					
+	DispSem = OSSemCreate(30);
+	OSTaskCreate(App_Task1,(void *)0,&Task1Stk[1023],6);
+    OSTaskCreate(App_Task2,(void *)0,&Task2Stk[1023],7);
+
+    OSStart();                             
+    while(1);
+}
+
+INT16U value;
+void  App_Task1 (void *p_arg)
+{
+    while(1)
+    {   
+		value = OSSemAccept(DispSem);
+		if(value>0)
+		{
+        	printf("Prajakta");
+        }
+        OSTimeDlyHMSM(0,0,1,0);
+    }
+}
+
+void  App_Task2 (void *p_arg)
+{
+    (void)p_arg;
+    
+    while(1)
+    {
+		value = OSSemAccept(DispSem);
+		if(value>0)
+		{
+        	printf("Mhatugade");
+        }
+        OSTimeDlyHMSM(0,0,1,0);
+     }
+
+}
+

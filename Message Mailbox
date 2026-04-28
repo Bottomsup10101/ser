@@ -1,0 +1,52 @@
+
+#include "includes.h"
+
+OS_STK Task1Stk[1024];
+OS_STK Task2Stk[1024];
+OS_EVENT  *CommMbox;
+int  main (void)
+{
+    BSP_Init();				
+    InitUart0();
+    OSInit();				         
+	CommMbox = OSMboxCreate((void *)0);
+		OSTaskCreate(App_Task1,(void *)0,&Task1Stk[1023],6);
+        OSTaskCreate(App_Task2,(void *)0,&Task2Stk[1023],7);
+    OSStart();                            
+    while(1);
+}
+
+INT16U value;
+INT8U err;
+INT8U key = 3;
+void  App_Task1 (void *p_arg)
+{
+    
+    
+    while(1)
+    {   
+		err = OSMboxPost(CommMbox, (void *)key);
+    printf("Message is transmitted after every 5 seconds \n");
+        OSTimeDlyHMSM(0,0,5,0);
+   }
+}
+
+
+void  App_Task2 (void *p_arg)
+{
+
+
+    INT8U  *msg;
+        while(1)
+    {
+    	msg = (INT8U *)(OSMboxPend(CommMbox, 10, &err));
+        if (err == OS_NO_ERR) 
+        {
+            printf("Message received \n");
+            printf("Received Message =%d \n", msg);
+        }
+        else
+            printf("Message not received \n");
+        OSTimeDlyHMSM(0,0,1,0);
+     }
+}

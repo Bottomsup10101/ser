@@ -1,5 +1,11 @@
->>> %Run Bluetooth.py
-Server started B8:27:EB:1D:E5:DE
-Waiting for connection
-Client connected 34:B9:8D:63:A0:8A
-Client disconnected
+from bluedot import BlueDot
+from gpiozero import LED
+
+bd = BlueDot()
+led = LED(18)
+
+while True:
+    bd.wait_for_press()
+    led.on()
+    bd.wait_for_release()
+    led.off()
